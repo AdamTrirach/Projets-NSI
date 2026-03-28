@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="presentation">
+  <h2>Recherche avancée dans le répertoire</h2>
+  <p>Utilisez un ou plusieurs champs pour affiner la recherche.</p>
+</div>
+
+<div class="form-container search-form"> <!--afficher les colonnes du tableau-->
+  <form method="get" class="search-grid">
+    <div class="search-row">
+      <label>Nom</label>
+      <input name="nom" value="{{ search_values.nom }}">
+    </div>
+    <div class="search-row">
+      <label>Prénom</label>
+      <input name="prenom" value="{{ search_values.prenom }}">
+    </div>
+    <div class="search-row">
+      <label>Date de naissance</label>
+      <input name="date_naissance" placeholder="YYYY-MM-DD" value="{{ search_values.date_naissance }}">
+    </div>
+    <div class="search-row">
+      <label>Adresse</label>
+      <input name="adresse" value="{{ search_values.adresse }}">
+    </div>
+    <div class="search-row">
+      <label>Profession</label>
+      <input name="profession" value="{{ search_values.profession }}">
+    </div>
+    <div class="search-row">
+      <label>Tél. fixe</label>
+      <input name="phone_fixe" value="{{ search_values.phone_fixe }}">
+    </div>
+    <div class="search-row">
+      <label>Tél. portable</label>
+      <input name="phone_portable" value="{{ search_values.phone_portable }}">
+    </div>
+    <div class="search-row">
+      <label>Email</label>
+      <input name="email" value="{{ search_values.email }}">
+    </div>
+
+    <div style="grid-column: 1 / -1; text-align:center; margin-top:10px;">
+      <button class="search-button" type="submit">Rechercher</button>
+      <a class="button-link" href="{{ url_for('index') }}">Réinitialiser</a>
+    </div>
+  </form>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th><th>Nom</th><th>Prénom</th><th>Date de naissance</th><th>Adresse</th>
+      <th>Profession</th><th>Tél. fixe</th><th>Tél. portable</th><th>Email</th><th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for c in contacts %} <!-- pour chaque contact afficher-->
+      <tr>
+        <td>{{ c['id_contact'] }}</td>
+        <td>{{ c['nom'] }}</td>
+        <td>{{ c['prenom'] }}</td>
+        <td>{{ c['date_naissance'] or '' }}</td>
+        <td>{{ c['adresse'] or '' }}</td>
+        <td>{{ c['profession'] or '' }}</td>
+        <td>{{ c['phone_fixe'] or '' }}</td>
+        <td>{{ c['phone_portable'] or '' }}</td>
+        <td>{{ c['email'] or '' }}</td>
+        <td>
+          {% if session.get('is_admin') or session.get('contact_id') == c['id_contact'] %} <!--Si le contact de cette ligne est l'utilisateur lui meme conencté ou un admin possiblité d'éditer ou de supprimer sa fiche-->
+            <a href="{{ url_for('edit', id_contact=c['id_contact']) }}">Éditer</a>
+            {% if session.get('is_admin') %}
+              <a href="{{ url_for('admin_confirm_delete', id_contact=c['id_contact']) }}">Suppr.</a>
+            {% else %}
+              <form style="display:inline" method="post" action="{{ url_for('delete', id_contact=c['id_contact']) }}">
+                <button class="button-delete" type="submit">Suppr.</button>
+              </form>
+            {% endif %}
+          {% endif %}
+        </td>
+      </tr>
+    {% else %}
+      <tr><td colspan="10">Aucun résultat</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

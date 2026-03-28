@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Club Info | Admin</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Espace Administrateur</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li> 
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="consultation.html">Liste des abonnés</a></li>
+                <li><a href="admin.html">Espace Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Connexion Admin</h2>
+        <h4>Entrez l'identifiant et le mot de passe administrateur (un seul ID a été donné).</h4>
+        <form action="admin_verif.php" method="POST">
+            <label for="identifiant">Identifiant :</label>
+            <input type="text" id="identifiant" name="identifiant" required>
+
+            <label for="mot_de_passe">Mot de passe :</label>
+            <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+
+            <button type="submit">Accéder à l'espace Admin</button>
+        </form>
+    </div>
+
+    <footer>
+        Site créé par Adam TRIRACH & Yanis EL OUARDI
+    </footer>
+</body>
+
+</html>

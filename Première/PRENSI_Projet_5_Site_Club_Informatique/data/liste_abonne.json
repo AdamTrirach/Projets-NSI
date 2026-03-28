@@ -1,0 +1,155 @@
+[
+    {
+        "nom": "Dupont",
+        "prenom": "Jean",
+        "date_naissance": "15-06-1995",
+        "adresse": "12 rue de Paris, 75001 Paris",
+        "telephone": "0601020304",
+        "email": "jean.dupont@email.com",
+        "password": "$2y$10$BCe.HMdPoVPuxuMEeKz75.QuIYcTyqY7zqV.HUvMsYacEOgMzf1a2"
+    },
+    {
+        "nom": "Martin",
+        "prenom": "Sophie",
+        "date_naissance": "23-11-1998",
+        "adresse": "5 avenue des Champs, 69000 Lyon",
+        "telephone": "0611223344",
+        "email": "sophie.martin@email.com",
+        "password": "$2y$10$pQlMerZ42zFLfhKch\/Pr7e0QLqs0HUSa\/9EY2HMHR3BHImOBruUAy"
+    },
+    {
+        "nom": "Lefebvre",
+        "prenom": "Paul",
+        "date_naissance": "08-04-2002",
+        "adresse": "",
+        "telephone": "0622334455",
+        "email": "paul.lefebvre@email.com",
+        "password": "$2y$10$d4ah55awQLcL0UqwuwLv.ufvq44hdWbfdDPvQbfJpxZbFagGTxxPO"
+    },
+    {
+        "nom": "Jean",
+        "prenom": "Mouloud",
+        "date_naissance": "01-04-2002",
+        "adresse": "5, rue des sans-papiers, 13000 Marseille",
+        "telephone": "0112233445",
+        "email": "jean.mouloud@email.com",
+        "password": "$2y$10$SCdv\/GtdrVBATbnpxkqTkOX4sms7We4jXVpHzWzV6r2NzzPWOmPJa"
+    },
+    {
+        "nom": "Dubois",
+        "prenom": "Alice",
+        "date_naissance": "10-09-1993",
+        "adresse": "",
+        "telephone": "0633445566",
+        "email": "alice.dubois@email.com",
+        "password": "$2y$10$J8OeZnM9Tz6K6MjfYbC0MOIb2BL1yO9jN6H3XZPzOGzScTkRM2b2K"
+    },
+    {
+        "nom": "Alaoui",
+        "prenom": "Youssef",
+        "date_naissance": "05-02-1990",
+        "adresse": "42 boulevard Haussmann, 75008 Paris",
+        "telephone": "0644556677",
+        "email": "julien.morel@email.com",
+        "password": "$2y$10$N6dBXb9AfbmH2Ej8JkgpmuI5RlYk2pLJBGvH2OiCf\/XZR2zXUt8yC"
+    },
+    {
+        "nom": "Bernard",
+        "prenom": "Clara",
+        "date_naissance": "30-07-1997",
+        "adresse": "15 rue de la R\u00e9publique, 13001 Marseille",
+        "telephone": "0655667788",
+        "email": "clara.bernard@email.com",
+        "password": "$2y$10$Xv3ZdP8O5qzTNOv2K9nCNuBB79HHoDqDUMMV9sUwGFArGpL4UpmOC"
+    },
+    {
+        "nom": "Mendes",
+        "prenom": "Nuno",
+        "date_naissance": "14-12-1992",
+        "adresse": "",
+        "telephone": "0666778899",
+        "email": "lucas.garcia@email.com",
+        "password": "$2y$10$Q2wUy\/3Rz6M8VtqTL8tbdEkKlM9HZQV3VJfG9UpRkt9a8FxO72Voq"
+    },
+    {
+        "nom": "Mohcine",
+        "prenom": "Achraf",
+        "date_naissance": "14-12-1992",
+        "adresse": "",
+        "telephone": "0666778899",
+        "email": "lucas.garcia@email.com",
+        "password": "$2y$10$Q2wUy\/3Rz6M8VtqTL8tbdEkKlM9HZQV3VJfG9UpRkt9a8FxO72Voq"
+    },
+    {
+        "nom": "Roux",
+        "prenom": "Emma",
+        "date_naissance": "03-05-2000",
+        "adresse": "9 rue des Lilas, 33000 Bordeaux",
+        "telephone": "0677889900",
+        "email": "emma.roux@email.com",
+        "password": "$2y$10$MTBVkP3QF92OpYhO5Rs3E.X5Gy\/lU38o\/MzKnqXwWqzXL.kYrplRO"
+    },
+    {
+        "nom": "Fournier",
+        "prenom": "Hugo",
+        "date_naissance": "21-08-1996",
+        "adresse": "",
+        "telephone": "0688990011",
+        "email": "hugo.fournier@email.com",
+        "password": "$2y$10$L0oKJ94x8O0PrFh7tYwRQeLsMlVXQmJpGqlD4SbUqUoU.XpM2tOf6"
+    },
+    {
+        "nom": "Girard",
+        "prenom": "Laura",
+        "date_naissance": "17-03-1994",
+        "adresse": "56 rue Lafayette, 44000 Nantes",
+        "telephone": "0699001122",
+        "email": "laura.girard@email.com",
+        "password": "$2y$10$AqMCJ8BXUz2TOqV6LpYGzPkkVQ5UPVnNMb4PfR3YNL6ZpMwFo6jW6"
+    },
+    {
+        "nom": "Lemoine",
+        "prenom": "Thomas",
+        "date_naissance": "29-10-1991",
+        "adresse": "7 rue de la Paix, 21000 Dijon",
+        "telephone": "0611223345",
+        "email": "thomas.lemoine@email.com",
+        "password": "$2y$10$KxMYBJ7PpN5TOzR3GpPL9OpU\/X3BpK8V9Qv7MzMLYXGpJ7ZwT4pB8"
+    },
+    {
+        "nom": "Nazario",
+        "prenom": "Julio",
+        "date_naissance": "14-12-1992",
+        "adresse": "",
+        "telephone": "0666778899",
+        "email": "lucas.garcia@email.com",
+        "password": "$2y$10$Q2wUy\/3Rz6M8VtqTL8tbdEkKlM9HZQV3VJfG9UpRkt9a8FxO72Voq"
+    },
+    {
+        "nom": "Mercier",
+        "prenom": "Camille",
+        "date_naissance": "12-06-1999",
+        "adresse": "",
+        "telephone": "0622334456",
+        "email": "camille.mercier@email.com",
+        "password": "$2y$10$PqVOZN6TXw4M2BpGJQ7ZPlR4L9KXPMY3XOb5VqTK9LZpXJ6RtWMN2"
+    },
+    {
+        "nom": "Dupuis",
+        "prenom": "Nicolas",
+        "date_naissance": "25-01-1989",
+        "adresse": "2 rue des Rosiers, 75004 Paris",
+        "telephone": "0633445567",
+        "email": "nicolas.dupuis@email.com",
+        "password": "$2y$10$RXJYPqW6XOBKMTZP9N4GLmR75TX8PKoL9V7Q5MXJ8QZG3OYN4pTZP"
+    },
+    {
+        "nom": "Raphael",
+        "prenom": "Vieira",
+        "date_naissance": "2001-12-12",
+        "adresse": "",
+        "telephone": "0645231411",
+        "email": "raph.vi@fauxmail.com",
+        "password": "$2y$10$mrkCaEjMwKCiimi0XkCN5etGznRu6mkdD7rUkJym936IfQcoulUna"
+    }
+]

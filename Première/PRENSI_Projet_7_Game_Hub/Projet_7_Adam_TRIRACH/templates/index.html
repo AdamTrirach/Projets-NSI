@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Game Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- url_for() est une fonction Flask qui génère l'URL vers le fichier "static" ; cette syntaxe évite les erreurs de chemin-->
+</head>
+<body>
+    <h1>Bienvenue sur le Mini Game Hub 🕹️</h1>
+    <h3>Le meilleur site pour jouer intelligemment !</h3>
+
+    <div class="grille-jeux">
+        <a href="/pendu" class="carte-jeu">
+            <img src="/static/img/accueil/pendu.png" alt="Pendu">
+            <h4>Le Pendu</h4>
+        </a>
+        <a href="/drapeaux" class="carte-jeu">
+            <img src="/static/img/accueil/drapeaux.png" alt="Drapeaux">
+            <h4>Quiz des Drapeaux</h4>
+        </a>
+        <a href="/memory" class="carte-jeu">
+            <img src="/static/img/accueil/memory.png" alt="Memory">
+            <h4>Memory</h4>
+        </a>
+        <a href="/nombre" class="carte-jeu">
+            <img src="/static/img/accueil/nombre.png" alt="Nombre">
+            <h4>Devine le Nombre</h4>
+        </a>
+    </div>
+
+    <footer>
+        <p>Site créé par Adam TRIRACH</p>
+        <p>Projet NSI 2025</p>
+    </footer>
+</body>
+</html>

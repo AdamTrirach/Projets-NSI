@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pile ou Face</title>
+</head>
+<body>
+    <h1>Jeu de Pile ou Face</h1>
+    <div>
+        <button onclick="lancerPiece()">Lancer la pièce</button>
+        <p id="resultat">Cliquez sur le bouton pour jouer.</p>
+    </div>
+    <script>
+        function lancerPiece() {
+            //génère un nombre aléatoire entre 0 et 1
+            let resultat = Math.random() < 0.5 ? 'Pile' : 'Face'; //random() génère un flottant compris entre 0 et 1
+            //si valeur générée inférieure à 0.5 => pile sinon face (1 chance sur 2 pour chaque issue)
+            document.getElementById('resultat').innerText = 'Résultat : '+resultat;
+        }
+    </script>
+</body>
+
+</html>

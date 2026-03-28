@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="form-container">
+  <h2>Mon profil</h2>
+  <form method="post"> <!--affiche dans le champ les infos deja enregistrés -->
+    <label>Nom :</label><input name="nom" value="{{ person['nom'] }}">
+    <label>Prénom :</label><input name="prenom" value="{{ person['prenom'] }}">
+    <label>Date de naissance :</label><input name="date_naissance" value="{{ person['date_naissance'] or '' }}"> 
+    <label>Adresse :</label><input name="adresse" value="{{ person['adresse'] or '' }}">
+    <label>Profession :</label><input name="profession" value="{{ person['profession'] or '' }}">
+    <label>Téléphone fixe :</label><input name="phone_fixe" value="{{ person['phone_fixe'] or '' }}">
+    <label>Téléphone portable :</label><input name="phone_portable" value="{{ person['phone_portable'] or '' }}">
+    <label>Email :</label><input name="email" value="{{ person['email'] or '' }}">
+    <button>Mettre à jour</button>
+  </form>
+  <a class="button-link" href="{{ url_for('logout') }}">Se déconnecter</a>
+</div>
+{% endblock %}

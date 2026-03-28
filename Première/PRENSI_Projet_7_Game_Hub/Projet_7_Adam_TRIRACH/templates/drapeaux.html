@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz des Drapeaux</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- url_for() est une fonction Flask qui génère l'URL vers le fichier "static" ; cette syntaxe évite les erreurs de chemin-->
+    <script defer src="{{ url_for('static', filename='js/drapeaux.js') }}"></script>
+    <!-- pareil ici pour le fichier javascript associé à la page du jeu des drapeaux-->
+</head>
+<body>
+    <h1>Devine les pays à partir de leurs drapeaux ! 🚩</h1>
+    <h4>Il est possible d'ignorer les espaces, les tirets ou les accents !</h4>
+
+    <p>Temps restant : <span id="timer">2:00</span></p>
+    <!-- Timer dynamique qui sera mis à jour avec le fichier javascript (lien avec l'id du span "timer")-->
+
+    <p id="message-fin" style="font-size: 20px; font-weight: bold; color: #333;"></p>
+    <!--Place préparée pour le message de fin de partie (victoire ou défaite)-->
+
+    <input type="text" id="reponse" placeholder="Écris le nom d’un pays…" autocomplete="off" />
+    <!--autocomplete off désactive les suggestions lors de la saisie-->
+    <!--Ce qu'il y a dans placeholder est le texte qui s'affichera sur le champ et disparaitra quand on écrit dessus (normalement)-->
+    <div id="drapeaux"></div>
+
+    <p><a href="/drapeaux">Rejouer</a> | <a href="/">Retour à l’accueil</a></p> <!--Rejouer ou retourner à l'accueil (avec Flask)-->
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu de Mémoire Informatique</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- url_for() est une fonction Flask qui génère l'URL vers le fichier "static" ; cette syntaxe évite les erreurs de chemin-->
+    <script defer src="{{ url_for('static', filename='js/memory.js') }}"></script>
+    <!--fichier js associé-->
+</head>
+<body>
+    <h1>Jeu de Mémoire 🧠</h1>
+    <h4>Retrouvez les dix paires cachés à l'aide de votre mémoire !</h4>
+    <div id="plateau"></div>
+    <p id="etat"></p>
+    <button onclick="initialiserJeu()">Rejouer</button>
+    <p><a href="/">Retour à l'accueil</a></p>
+</body>
+</html>
+

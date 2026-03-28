@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Club Info | Consultation</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<script> //permet de vérifier la session, càd si l'utilisateur s'est bien connecté avant pour obtenir l'accès à la consultation
+    fetch("session_check.php") //en ce qui concerne les commandes "fetch", "then" et "catch", voir le fichier "affichage_abonnes.js"
+        .then(response => response.json())
+        .then(data => {
+            if (!data.authenticated) { //Vérifie si la clé "authenticated" dans la réponse JSON est égale à false, ce qui signifie que l'utilisateur n'est pas authentifié
+                alert("Vous devez être connecté pour voir la liste des abonnés."); //si l'utilisateur n'est pas connecté, un message d'alerte est affiché
+                window.location.href = "login.html"; //redirige vers la page de connexion après avoir appuyé sur ok dans la fenetre d'alerte 
+            } else {
+                //l'utilisateur est authentifié, on charge le script
+                let script = document.createElement("script");
+                    script.src = "affichage_abonnes.js";
+                    document.body.appendChild(script);}
+        })
+        .catch(error => console.error("Erreur de vérification de session :", error)); //(côté dev) en cas d'erreur lors de la vérification, affiche dans la console l'erreur en question 
+</script>
+
+<body>
+    <header>
+        <h1>Bienvenue sur le site du Club Informatique</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="consultation.html">Liste des abonnés</a></li>
+                <li><a href="admin.html">Espace Admin</a></li>
+                <li><a href="logout.php">Déconnexion</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div> <!-- Affichage de liste d'abonnés sous forme de table -->
+        <table border="1" id="table-abonnes"> <!--L'en tete de la table s'affiche quand même si on est pas connecté mais pas le reste-->
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Prénom</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Les abonnés seront ajoutés ici avec JavaScript -->
+            </tbody>
+        </table><br><br>
+    </div>
+    
+    <footer>
+        Site créé par Adam TRIRACH & Yanis EL OUARDI
+    </footer>
+
+</body>
+
+</html>

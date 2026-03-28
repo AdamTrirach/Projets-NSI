@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculatrice Rudimentaire</title>
+</head>
+<body>
+    <h1>Calculatrice Rudimentaire</h1>
+    <div>
+        <input type="text" id="resultat" readonly> <!--c'est un input ou on ne peut rien entrer, c'est juste pour l'affichage-->
+        <br><br>
+        <button onclick="ajouter('7')">7</button>
+        <button onclick="ajouter('8')">8</button>
+        <button onclick="ajouter('9')">9</button>
+        <button onclick="ajouter('/')">/</button><br>
+        <button onclick="ajouter('4')">4</button>
+        <button onclick="ajouter('5')">5</button>
+        <button onclick="ajouter('6')">6</button>
+        <button onclick="ajouter('*')">*</button><br>
+        <button onclick="ajouter('1')">1</button>
+        <button onclick="ajouter('2')">2</button>
+        <button onclick="ajouter('3')">3</button>
+        <button onclick="ajouter('-')">-</button><br>
+        <button onclick="ajouter('0')">0</button>
+        <button onclick="ajouter('.')">.</button>
+        <button onclick="calculer()">=</button>
+        <button onclick="ajouter('+')">+</button><br><br>
+        <button onclick="effacer()">C</button>
+    </div>
+
+    <script>
+        function ajouter(valeur) {
+            document.getElementById('resultat').value+=valeur;}
+        function calculer() {
+            try {
+                let expression = document.getElementById('resultat').value;
+                let resultat = eval(expression); //evalue l'expression mathématique
+                document.getElementById('resultat').value=resultat;
+            } catch(e) { //en cas d'erreur (diviser par 0)
+                document.getElementById('resultat').value = 'Erreur';
+            }}
+        function effacer() {
+            document.getElementById('resultat').value='';}
+    </script>
+</body>
+
+</html>

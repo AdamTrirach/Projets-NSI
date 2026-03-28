@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Répertoire</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Répertoire téléphonique</h1>
+    <nav>
+  <ul>
+    <li><a href="{{ url_for('index') }}" class="{% if request.path=='/' %}active{% endif %}">Accueil</a></li>
+    <li><a href="{{ url_for('register') }}" class="{% if request.path=='/register' %}active{% endif %}">Inscription</a></li>
+
+    {% if session.get('is_admin') %} <!--Si connecté en tant qu'admin afficher dans nav : -->
+      <li><a href="{{ url_for('admin_dashboard') }}" class="{% if request.path.startswith('/admin') %}active{% endif %}">Admin</a></li>
+      <li><a href="{{ url_for('admin_logout') }}">Déconnexion Admin</a></li>
+    {% else %} <!--Sinon afficher connexion admin dans nav-->
+      <li><a href="{{ url_for('admin_login') }}">Connexion Admin</a></li>
+    {% endif %}
+
+    {% if session.get('username') and not session.get('is_admin') %} <!--Si connecté simplement en tant qu'utilisateur-->
+      <li><a href="{{ url_for('profil') }}">Mon profil</a></li>
+      <li><a href="{{ url_for('logout') }}">Déconnexion</a></li>
+    {% endif %}
+  </ul>
+</nav>
+
+
+  </header>
+
+  <main>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for cat, msg in messages %}
+          <div class="{{ 'error-message' if cat=='error' else 'success-message' }}">{{ msg }}</div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
+
+<!--Ce fichier html est la base de toutes les pages, pour une page de ce site on prend cette base et on l'étend dans le fichier html de la page en question-->

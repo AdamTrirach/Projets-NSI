@@ -1,0 +1,62 @@
+<!--Page d'inscription-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Club Info | Inscription</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenue sur le site du Club Informatique</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="consultation.html">Liste des abonnés</a></li>
+                <li><a href="admin.html">Espace Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Formulaire d'inscription :</h2>
+        <form action="signin.php" method="POST"> <!--La méthode POST est plus sécurisée que la méthode GET-->
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required><br> <!--Le mot clé "required" permet de rendre l'input obligatoire à l'envoi pour l'utilisateur-->
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required><br>
+
+            <label for="date_naissance">Date de naissance :</label>
+            <input type="date" id="date_naissance" name="date_naissance" required><br> <!--Le type "date" permet d'interpréter l'input et de rendre possible sa manipulation directement sous forme de date-->
+
+            <label for="adresse">Adresse (non requis):</label>
+            <input type="text" id="adresse" name="adresse"><br>
+
+            <label for="telephone">Numéro de téléphone :</label>
+            <input type="tel" id="telephone" name="telephone" required><br> <!--Le type "tel" définit le champ de saisie pour un numéro de téléphone.-->
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required><br><br> <!--De même pour le type "email".-->
+
+            <label for="password">Mot de passe :</label> <!--Mot de passe et sa confirmation-->
+            <input type="password" id="password" name="password" required><br>
+        
+            <label for="confirm_password">Confirmer le mot de passe :</label>
+            <input type="password" id="confirm_password" name="confirm_password" required><br>
+
+            <button type="submit">S'inscrire</button> <!--Un bouton de type "submit" permet l'envoi de toutes les données entrées dans le formulaire.-->
+            
+            <br><br>
+        </form>
+    </div>
+    
+    <footer>
+        Site créé par Adam TRIRACH & Yanis EL OUARDI
+    </footer>
+</body>
+
+</html>

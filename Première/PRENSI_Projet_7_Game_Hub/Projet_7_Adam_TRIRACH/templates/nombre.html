@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Devine le Nombre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- url_for() est une fonction Flask qui génère l'URL vers le fichier "static" ; cette syntaxe évite les erreurs de chemin-->
+    <script defer src="{{ url_for('static', filename='js/nombre.js') }}"></script>
+    <!--fichier js associé-->
+</head>
+<body>
+    <h1>Devine le nombre mystère 🔢</h1>
+    <h4>Entre 1 et 10000 en moins de 60 secondes ⏱️</h4>
+
+    <p>Temps restant : <span id="chrono">1:00</span></p> <!--timer comme dans drapeau.html-->
+
+    <button id="commencer">Commencer</button><br> <!--Il y a un bouton pour commencer la partie et lancer le chrono-->
+
+    <input type="number" id="saisie" style="font-size:20px; padding:10px; width:250px;" placeholder="Entre un nombre..." min="1" max="10000" autocomplete="off" />
+    <!--Accepte un nombre entre 1 et 10000 mais rien d'autre, autocomplete = off => voir drapeaux.html-->
+    <br><button id="envoyer">Valider</button> <!--Bouton pour valider après avoir tapé le nombre-->
+
+    <p id="indice"></p> <!--C'est plus ou c'est moins-->
+    <p id="message-fin"></p>
+
+    <button onclick="preparerJeu()">Rejouer</button>
+    <p><a href="/">Retour à l'accueil</a></p>
+</body>
+</html>

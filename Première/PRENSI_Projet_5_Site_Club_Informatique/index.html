@@ -1,0 +1,85 @@
+<!--Page d'accueil du site du Club-Informatique-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Club Info | Accueil</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenue sur le site du Club Informatique</h1>
+        <nav> <!--Navigation-->
+            <ul>
+                <li><a href="index.html">Accueil</a></li> 
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="consultation.html">Liste des abonnés</a></li>
+                <li><a href="admin.html">Espace Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main> <!--Il est préférable d'utiliser main apparemment-->
+        <section class="presentation">
+            <h2>Bienvenue sur le site officiel du Club Informatique ! </h2>
+            <p>
+                Ce site permet aux membres de s'inscrire, 
+                de consulter la liste des abonnés et d'explorer les projets des membres du site.
+            </p>
+            <img src="images/club-informatique.png" class="presentation-image">
+        </section>
+        <section class="presentation">
+            <h2>L'histoire de l'informatique en bref</h2>
+            <p>
+                L'informatique trouve ses origines dans les premiers calculs mécaniques du <strong>XVII<sup>e</sup> siècle</strong> avec la machine à calculer de <strong>Blaise Pascal</strong> (1642) et la machine analytique de <strong>Charles Babbage</strong> au <strong>XIX<sup>e</sup> siècle</strong>.
+            </p>
+            <ul class="presentation-history">
+                <li><strong>1945</strong> : Création de l'<strong>ENIAC</strong>, premier ordinateur électronique programmable.</li>
+                <li><strong>1950-1960</strong> : Invention du transistor, rendant les ordinateurs plus compacts et rapides.</li>
+                <li><strong>1971</strong> : Apparition des premiers microprocesseurs (<strong>Intel 4004</strong>).</li>
+                <li><strong>1980</strong> : Révolution du marché grand public par <strong>Apple</strong>, <strong>IBM</strong> et <strong>Microsoft</strong>.</li>
+                <li><strong>1990</strong> : Expansion d'<strong>Internet</strong> et démocratisation des ordinateurs personnels.</li>
+                <li><strong>2000</strong> : Naissance des <strong>smartphones</strong> et mobilité informatique.</li>
+                <li><strong>Aujourd'hui</strong> : Progrès en <strong>intelligence artificielle</strong>, <strong>cloud computing</strong> et <strong>cybersécurité</strong>.</li>
+            </ul>
+            <p>
+                L'informatique continue de façonner nos sociétés, notre manière de travailler et de communiquer, tout en restant au cœur des transformations économiques et culturelles du <strong>XXI<sup>e</sup> siècle</strong>.
+            </p>
+        </section>
+        <section class="presentation">
+            <h2>Projets de nos membres</h2>
+            <ul>
+                <li>
+                    <h3>Calculatrice Rudimentaire par <i>Thomas Lemoine</i></h3>
+                    <p>Une simple calculatrice permettant d'effectuer des opérations de base (addition, soustraction, multiplication, division).</p>
+                    <a href="projects/calculatrice.html" class="button-link" target="_blank">Accéder à la calculatrice</a>
+                </li><br><!--Target _blank fais en sorte que quand on appuie sur le lien, ça crée un nouvel onglet-->
+                <li>
+                    <h3>Jeu de Pile ou Face par <i>Nicolas Dupuis</i></h3>
+                    <p>Un jeu aléatoire pour tester votre chance. Devinez si ce sera pile ou face !</p>
+                    <a href="projects/pile_ou_face.html" class="button-link" target="_blank">Jouer au pile ou face</a>
+                </li><br>
+                <li>
+                    <h3>Chercheur de Nombres Premiers par <i>Emma Roux</i></h3>
+                    <p>Un outil qui vous permet de générer des nombres premiers jusqu'à une limite donnée.</p>
+                    <a href="projects/nombres_premiers.html" class="button-link" target="_blank">Trouver des nombres premiers</a>
+                </li>
+            </ul>
+        </section>
+        <section class="presentation">
+            <p>
+                Rejoignez-nous dès aujourd'hui pour explorer l'univers passionnant de l'informatique avec des personnes qui s'y intéressent comme vous !
+                <br><a href="inscription.html" class="button-link">S'inscrire</a>
+            </p>
+
+        </section>
+    </main>
+    
+    <footer>
+        Site créé par Adam TRIRACH & Yanis EL OUARDI
+    </footer>
+</body>
+
+</html>

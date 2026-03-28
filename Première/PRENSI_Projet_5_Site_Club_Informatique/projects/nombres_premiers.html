@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chercheur de Nombres Premiers</title>
+</head>
+<body>
+    <h1>Chercheur de Nombres Premiers</h1>
+    <div>
+        <label for="limite">Entrez un nombre limite :</label>
+        <input type="number" id="limite" min="2" placeholder="Ex: 100"> <!--Placeholder permet de donenr un exemple dans la barre d'input directement ; 
+        //input type number met un input ou on peut choisir un nombre et faire défiler les nombres-->
+        <button onclick="trouverNombresPremiers()">Chercher</button>
+    </div>
+    <h2>Résultats :</h2>
+    <p id="resultat">Les nombres premiers apparaîtront ici.</p>
+    <script>
+        function estPremier(nombre) {
+            if (nombre < 2) return false;
+            for (let i = 2; i <= Math.sqrt(nombre); i++) {
+                if (nombre % i === 0) {
+                    return false;
+                }
+            }
+            return true;}
+        function trouverNombresPremiers() {
+            let limite = parseInt(document.getElementById('limite').value);
+            if (isNaN(limite)||limite < 2) { //nombre valide ou supérieur ou égal à 2 (sinon il sert à rien le site)
+                document.getElementById('resultat').innerText = "Veuillez entrer un nombre valide supérieur ou égal";
+                document.getElementById('resultat').innerText = "Veuillez entrer un nombre valide supérieur ou égal à 2.";
+                return;
+            }
+            let resultats = [];
+            for (let i = 2; i <= limite; i++) {
+                if (estPremier(i)) {
+                    resultats.push(i);
+                }
+            }
+
+            document.getElementById('resultat').innerText = "Les nombres premiers jusqu'à " + limite + " sont : " + resultats.join(", ");}
+    </script>
+</body>
+</html>

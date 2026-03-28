@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jeu du Pendu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- url_for() est une fonction Flask qui génère l'URL vers le fichier "static" ; cette syntaxe évite les erreurs de chemin-->
+</head>
+<body>
+    <h1>Jeu du Pendu 🪢</h1>
+
+    <p>Mot à deviner :</p>
+    <h2>{{ mot_affiche }}</h2> <!--la syntaxe avec les doubles accolades permet d'afficher des variables Flask-->
+    <!--mot_affiche est une variable de app.py par Flask-->
+
+    <!--affichage des lettres déjà proposées -->
+    <p>Lettres proposées : {{ lettres | join(", ") }}</p>
+    <!--séparées par une virgule-->
+
+    <!--compteur d'erreurs (10 max)-->
+    <p>Erreurs : {{ erreurs }} / 10</p>
+
+    <!--message d'info-->
+    <p style="color:blue">{{ message }}</p>
+
+    <!--formulaire de proposition de lettre-->
+    <form method="post"> <!--envoies les données du client au serveur (plus sécurisé)-->
+
+        <label for="lettre">Propose une lettre :</label>
+        <!--label descriptif pour l'input-->
+        <input type="text" name="lettre" maxlength="1" autocomplete="off" required autofocus>
+        <!--maxlength="1" n'accepte qu'un seul caractère ; required oblige l'utilisateur a entrer le champ avat d'envoyer -->
+        <!--autocomplete off desactive les suggestions dans le champ de saisie-->
+        <button type="submit">Envoyer</button>
+        <!--bouton de soumission du formulaire-->
+
+    </form>
+    {% if "gagné" in message or "perdu" in message %} <!--syntaxe python : le formulaire s'affiche que si la condition est vraie-->
+        <br>
+        <form method="post" action="/rejouer">
+            <button type="submit">Rejouer</button>
+        </form>
+    {% endif %} <!--sorte de balise de fin de la condition-->
+
+    <!--lien de retour à la page d'accueil-->
+    <p><a href="/">Retour à l'accueil</a></p>
+
+</body>
+</html>
