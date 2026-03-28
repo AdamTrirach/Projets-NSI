@@ -13,5 +13,5 @@ Projets réalisés en Première et Terminale NSI
 
 ### Terminale
 * **TERNSI_Projet_1_Répertoire_Téléphonique :** Développement web avec Flask et utilisation de base de donnée relationnelle
-* **TERNSI_Projet_2_Arbre_Binaire :** Implémentation des arbres binaires et des arbres binaires de recherches en Python
+* **TERNSI_Projet_2_Arbre_Binaire :** Implémentation des arbres binaires et des arbres binaires de recherches en Python (POO)
 * **TERNSI_Projet_3_Front_de_Pareto :** Diviser pour régner
